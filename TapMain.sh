@@ -2,6 +2,7 @@
 
 #THIS TIME I know what I'm doing.
 #You wont see any spaggheti code from me, no siree.
+#I like pizza better anyways.
 
 function=''
 
@@ -11,9 +12,9 @@ clear
 while true; do
     read -p $'\e[31m~\e[33m+\e[32m>\e[0m ' function
 
-    IFS=' ' read -raexi function_split <<< "$function"
+    IFS=' ' read -ra function_split <<< "$function"
     HISTORY+=("$function")
-    
+
     #COMMANDS
     case ${function_split[0]} in
         'utter')
