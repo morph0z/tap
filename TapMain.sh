@@ -18,13 +18,13 @@ while true; do
     #COMMANDS
     case ${function_split[0]} in
         'utter')
+            d_flag_utter=false
             declare -a args=()
             unset function_split[0]
             for i in ${function_split[@]}; do
                 args+=("$i")
             done
-            echo ${args[@]}
-            functions/utter.sh args[@]
+            functions/utter.sh ${args[@]}
         ;;
 
         'history')
