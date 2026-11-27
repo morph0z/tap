@@ -18,7 +18,6 @@ while true; do
     #COMMANDS
     case ${function_split[0]} in
         'utter')
-            d_flag_utter=false
             declare -a args=()
             unset function_split[0]
             for i in ${function_split[@]}; do
@@ -26,9 +25,38 @@ while true; do
             done
             functions/utter.sh ${args[@]}
         ;;
+        'uter')
+            declare -a args=()
+            unset function_split[0]
+            for i in ${function_split[@]}; do
+                args+=("$i")
+            done
+            functions/utter_mispelled.sh ${args[@]}
+        ;;
+        'utterr')
+            declare -a args=()
+            unset function_split[0]
+            for i in ${function_split[@]}; do
+                args+=("$i")
+            done
+            functions/utter_mispelled.sh ${args[@]}
+        ;;
+        'utteer')
+            declare -a args=()
+            unset function_split[0]
+            for i in ${function_split[@]}; do
+                args+=("$i")
+            done
+            functions/utter_mispelled.sh ${args[@]}
+        ;;
+
+        'watdatime')
+            functions/watdatime.sh
+        ;;
 
         'history')
             source functions/history.sh
+        ;;
     esac
 
 
